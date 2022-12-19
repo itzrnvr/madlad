@@ -1,4 +1,5 @@
 from client import auth
+from client import chat
 
 
 class madlad:
@@ -11,7 +12,10 @@ class madlad:
     def register(self, username, password):
         return auth.register(username, password)
 
+    def getChatManager(self):
+        return chat.ChatManager
 
-client = madlad()
-response =  client.login("Saurav", "444")
+
+# client = madlad()
+# response =  client.login("Saurav", "444")
 # client.register("Shivam", "123")
