@@ -12,8 +12,12 @@ class madlad:
     def register(self, username, password):
         return auth.register(username, password)
 
+    def uploadPfp(self):
+        return auth.uploadPfp()
+
     def getChatManager(self):
         return chat.ChatManager
+
 
 
 # client = madlad()

@@ -9,7 +9,7 @@ class ChatManager:
     def __init__(self, clientID):
         self.onMes = None
         self.ws = create_connection("wss://concord-28ll.onrender.com/api/v1/chats/all/ws/" + clientID)
-        readThread = StoppableThread(target=self.read)
+        readThread = StoppableThread(target=self.read)x
         readThread.start()
         # writeThread = StoppableThread(target=self.write)
 
