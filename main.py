@@ -2,15 +2,15 @@ from client import auth
 from client import chat
 
 
-class madlad:
+class Madlad:
     def __init__(self):
         pass
 
-    def login(self, username, password):
-        return auth.login(username, password)
+    def login(self, pfp, username, password):
+        return auth.login(pfp, username, password)
 
-    def register(self, username, password):
-        return auth.register(username, password)
+    def register(self, pfp, username, password):
+        return auth.register(pfp, username, password)
 
     def uploadPfp(self):
         return auth.uploadPfp()
@@ -19,7 +19,12 @@ class madlad:
         return chat.ChatManager
 
 
-
-# client = madlad()
-# response =  client.login("Saurav", "444")
-# client.register("Shivam", "123")
+client = Madlad()
+response = client.login("", "Saurav", "444")
+client.register("https://i.pinimg.com/236x/cc/50/ca/cc50cada4658669e26f818405cc7016b.jpg", "Shivam", "123")
+chatMag = client.getChatManager()("88")
+chatMag.sendMessage(
+    "https://i.pinimg.com/236x/cc/50/ca/cc50cada4658669e26f818405cc7016b.jpg",
+    "Shivam",
+    "123"
+)
