@@ -4,7 +4,7 @@ import json
 from .cThread import StoppableThread
 import sys
 
-API = "ws://localhost:8000"
+API = "wss://concord-28ll.onrender.com"
 class ChatManager:
     def __init__(self, clientID):
         self.onMes = None

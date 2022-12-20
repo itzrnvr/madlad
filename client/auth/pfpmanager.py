@@ -19,12 +19,7 @@ class PfpManager:
 
     def getAndUpload(self):
         self.file_path = filedialog.askopenfilename()
-        src = ""
-        try:
-            src = self.uploadImage(self.file_path)
-        except:
-            print("User closed the context dialog")
-        return src
+        self.uploadImage(self.file_path)
 
     def uploadImage(self, path):
         cloudinary.uploader.upload(path, public_id="pfp", unique_filename=False, overwrite=True)
